@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="margin-left:35px; width:100%;">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <Label>Enter Movie Name: </Label><br>
+        <input type="text" name="name" style="width:300px;"><br><br>
+        <Label>Enter Movie Description: </Label><br>
+        <textarea type="text" name="desc" style="height:100px;width:300px;"></textarea><br><br>
+        <Label>Enter Movie Year: </Label><br>
+        <input type="text" name="year" placeholder="Enter movie year" style="width:300px;"><br><br>
+        <Label>Upload Image: </Label><br>
+        <input type="file" name="img" style="width:300px;"><br><br>
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
